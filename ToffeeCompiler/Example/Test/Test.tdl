@@ -1,0 +1,63 @@
+// This file will test all of the functions of the TDL parser
+// Set the network name
+network TestNet;
+
+// First, let's test importing...
+import TestImport;
+import TestDirectory/TestImport;
+
+// Next, let's define some objects outside of any namespace
+struct OutsiderStruct
+{
+	// Properties
+	int Foo;
+	string Bar;
+}
+
+class OutsiderClass
+{
+	// Properties
+	string PropertyWithoutModifiers;
+	float[] PropertyWithModifiers ownsend broadcast ram;
+
+	// Methods
+	TestMethod();
+	TestMethodWithParameters(string a1, int a2);
+	TestMethodWithParametersAndModifiers(string a1, int a2) broadcast ram;
+}
+
+/*
+For now, don't parse services because they don't count towards the hash.
+service OutsiderService
+{
+	// Methods
+	RequestAuthentication(string authToken) anonsend;
+	AuthenticationResponse(bool success);
+}
+*/
+
+// Now, let's define a namespace
+namespace TestNamespace
+{
+	struct Vector3
+	{
+		float X;
+		float Y;
+		float Z;
+	}
+	
+	// Let's also test structure references
+	struct TestReference
+	{
+		Vector3 Position;
+	}
+}
+
+// Finally, let's test required namespaces.
+namespace TestUsing
+{
+	struct UsingTest
+	{
+		Vector3 Position;
+	}
+}

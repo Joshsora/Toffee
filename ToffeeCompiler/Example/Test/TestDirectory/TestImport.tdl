@@ -1,0 +1,6 @@
+namespace DirectoryImported
+{
+	struct DirectoryImported
+	{
+	}
+}

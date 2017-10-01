@@ -1,0 +1,12 @@
+﻿/*
+This TDL file imports the definitions of structures that are used in the Toffee protocol.
+*/
+
+network StdToffee;
+
+import Headers;
+import Handshake;
+import Objects;
+
+import ClientAgent;
+import MessageDirector;

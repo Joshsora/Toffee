@@ -1,0 +1,134 @@
+TDL was made to be similar to Disney's DC file for their OTP networking system (which Toffee is based on).
+It's syntax is similar to C++.
+
+- Example:
+======================================================================
+
+/*
+Example multiline comment.
+*/
+namespace ExampleNamespace
+{
+    struct ExampleStruct
+    {
+        int ExampleProperty;
+    }
+
+    class ExampleClass
+    {
+        ExampleMethod(string exampleParameter);
+    }
+
+    class ExampleInheritance : ExampleClass
+    {
+		// Other methods would be defined here
+    }
+
+    service ExampleService
+    {
+		// RPC methods would be defined here
+    }
+}
+
+- Standard Types:
+======================================================================
+
+======================================================================
+| Type   | Description                      | C#     | C++ (cstdint) |
+======================================================================
+| bool   | A boolean value.                 | bool   | bool          |
+======================================================================
+| char   | A single-byte character.         | char   | char          |
+======================================================================
+| sbyte  | A signed byte.                   | sbyte  | int8_t        |
+======================================================================
+| byte   | An unsigned byte.                | byte   | uint8_t       |
+======================================================================
+| short  | A signed 16-bit integer.         | short  | int16_t       |
+======================================================================
+| ushort | An unsigned 16-bit integer.      | ushort | uint16_t      |
+======================================================================
+| int    | A signed 32-bit integer.         | int    | int32_t       |
+======================================================================
+| uint   | An unsigned 32-bit integer.      | uint   | uint32_t      |
+======================================================================
+| long   | A signed 64-bit integer.         | long   | int64_t       |
+======================================================================
+| ulong  | An unsigned 64-bit integer.      | ulong  | uint64_t      |
+======================================================================
+| string | A string of characters.          | string | string        |
+======================================================================
+| float  | A 32-bit floating-point integer. | float  | float         |
+======================================================================
+| double | A 64-bit floating-point integer. | double | double        |
+======================================================================
+
+Appending "[]" to the end of any typename will make the type an array.
+
+- Imports:
+======================================================================
+
+"import TestImport"
+"import Directory/TestImport"
+
+An import statement will begin parsing the ".tdl" file specified.
+The structures, classes, and services defined in the imported file will
+be added as if they were part of the file.
+
+NOTE: Do not include the extension in the import statement.
+
+- Namespaces:
+======================================================================
+
+"namespace TestNamespace { ... }"
+
+Namespaces allow you to break your tdl file up into groups that contain
+structures, classes, and services that are part of the same feature.
+
+The namespace statement will create a namespace with the identifier provided.
+All structures, classes, and services defined after the '{', and before the '}'
+will be part of that namespace.
+
+Namespace identifiers separated by '.' characters will create nested namespaces,
+however, you CANNOT nest namespace statements.
+
+For Example:
+"namespace Hello.World { ... }"
+is valid, while:
+"namespace Hello { namespace World { ... } }"
+is not.
+
+- Properties:
+======================================================================
+
+structs: "float identifier;"
+classes: "float identifier ram;"
+
+In structures, properties are pieces of data in the structure.
+In classes, properties are single-typed fields.
+
+- Methods:
+======================================================================
+
+- Structs:
+======================================================================
+
+"struct TestStructure { ... }"
+
+The struct statement will create a new Struct and add it to the
+current namespace. Structs may only contain properties.
+Struct properties cannot have modifiers.
+
+- Classes:
+======================================================================
+
+"class TestClass { ... }"
+
+The class statement will create a new Class and add it to the
+current namespace. Classes may contain both properties, and methods.
+Class properties may have modifiers.
+
+- Services:
+======================================================================
+
+"service TestService { ... }"

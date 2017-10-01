@@ -1,0 +1,87 @@
+struct AvatarPendingDel {
+  uint Avatar;
+  uint date;
+}
+
+struct BarrierData {
+  ushort context;
+  string name;
+  uint[] avIds;
+}
+
+struct OSInfo {
+  string name;
+  short platform;
+  short major;
+  short minor;
+}
+
+struct CPUSpeed {
+  int/1000 maxSpeed;
+  int/1000 currentSpeed;
+}
+
+struct Fixture {
+  int/10 x;
+  int/10 y;
+  int/10 z;
+  short/10 h;
+  short/10 p;
+  short/10 r;
+  string state;
+}
+
+struct TalkModification {
+  ushort offset;
+  ushort size;
+}
+
+struct FriendEntry {
+  uint friendId;
+  byte friendType;
+}
+
+struct FriendInfo {
+  string avatarName;
+  uint avatarId;
+  string playerName;
+  byte onlineYesNo;
+  byte openChatEnabledYesNo;
+  byte openChatFriendshipYesNo;
+  byte wlChatEnabledYesNo;
+  string location;
+  string sublocation;
+  uint timestamp;
+}
+
+struct AvatarFriendInfo {
+  string avatarName;
+  string playerName;
+  uint playerId;
+  byte onlineYesNo;
+  byte openChatEnabledYesNo;
+  byte openChatFriendshipYesNo;
+  byte wlChatEnabledYesNo;
+}
+
+struct MemberInfo {
+  uint avatarId;
+  string avatarName;
+  byte avatarRank;
+  byte avatarOnline;
+  uint bandManagerId;
+  uint bandId;
+}
+
+struct leaderBoardRecordResponces {
+  char found;
+  uint id;
+  string text;
+  int value;
+}
+
+struct leaderBoardRecord {
+  uint id;
+  string text;
+  int value;
+}

@@ -1,0 +1,31 @@
+ToffeeCompiler v1.0.0
+Author: Joshua Scott (Joshsora)
+
+Usage: ToffeeCompiler.exe [-GeneratorScript] <String> [-InputFile] <String> [-BaseNamespace <String>]
+   [-OutputDirectory <String>] [-Verbose]
+
+What is ToffeeCompiler?
+=======================================
+
+ToffeeCompiler is a utility to convert .tdl ("Toffee Definition Language") files
+into source code that can be used by Toffee libraries.
+
+How does it work?
+=======================================
+
+ToffeeCompiler takes two files as input, a .tdl file, and a .tofc file.
+The .tdl file contains the definitions of structures, objects, and services
+that can reside on any Toffee network that also implements them.
+The .tofc file defines the patterns of the output language.
+
+The .tofc is internally supplied data via a ToffeeDataGatherer.
+
+For more information on both TDL, and TOFC, please read the documentation here:
+/Toffee/Documentation/TDL Syntax.txt
+/Toffee/Documentation/TOFC Syntax.txt
+
+Example Usage
+=======================================
+
+To run the example, execute the following command:
+ToffeeCompiler csharp Example/Test/Test.tdl -OutputDirectory Output/

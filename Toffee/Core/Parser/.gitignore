@@ -1,0 +1,4 @@
+## Ignore output from GPLEX/GPPG
+TdlParser.cs
+TdlParser.lst
+TdlScanner.cs
