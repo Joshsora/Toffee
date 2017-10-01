@@ -83,12 +83,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Toffee\Toffee.csproj">
-      <Project>{b0583f3b-8120-4077-8d35-d645a6a15ce6}</Project>
-      <Name>Toffee</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Example\Errors\Syntax\" />
   </ItemGroup>
   <ItemGroup>
@@ -101,6 +95,16 @@
     <Content Include="Scripts\Place Generators Here.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toffee.Compiler\Toffee.Compiler.csproj">
+      <Project>{6115ebc7-c970-4c8b-a1dc-f80f994a94df}</Project>
+      <Name>Toffee.Compiler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toffee.Core\Toffee.Core.csproj">
+      <Project>{60c832df-ccda-4edd-9da3-10dfe4db36de}</Project>
+      <Name>Toffee.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

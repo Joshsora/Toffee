@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60C832DF-CCDA-4EDD-9DA3-10DFE4DB36DE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Toffee.Core</RootNamespace>
+    <AssemblyName>Toffee.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fasterflect, Version=2.1.3.0, Culture=neutral, PublicKeyToken=38d18473284c1ca7, processorArchitecture=MSIL">
+      <HintPath>..\packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Parser\Definitions\TdlClass.cs" />
+    <Compile Include="Parser\Definitions\TdlField.cs" />
+    <Compile Include="Parser\Definitions\TdlFile.cs" />
+    <Compile Include="Parser\Definitions\TdlMethod.cs" />
+    <Compile Include="Parser\Definitions\TdlNamespace.cs" />
+    <Compile Include="Parser\Definitions\TdlObject.cs" />
+    <Compile Include="Parser\Definitions\TdlParameter.cs" />
+    <Compile Include="Parser\Definitions\TdlProperty.cs" />
+    <Compile Include="Parser\Definitions\TdlService.cs" />
+    <Compile Include="Parser\Definitions\TdlStruct.cs" />
+    <Compile Include="Parser\Definitions\TdlType.cs" />
+    <Compile Include="Parser\ShiftReduceParserCode.cs" />
+    <Compile Include="Parser\TdlParser.cs" />
+    <Compile Include="Parser\TdlParserException.cs" />
+    <Compile Include="Parser\TdlScanner.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToffeeErrorCodes.cs" />
+    <Compile Include="ToffeeException.cs" />
+    <Compile Include="ToffeeModifiers.cs" />
+    <Compile Include="ToffeeOpCode.cs" />
+    <Compile Include="ToffeeValueType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Parser\TdlParser.y" />
+    <None Include="Parser\TdlScanner.lex" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toffee.Util\Toffee.Util.csproj">
+      <Project>{203d7b30-9793-4314-8ca3-acd227c86b34}</Project>
+      <Name>Toffee.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\TDL Syntax.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Parser\.gitignore" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>cd "$(ProjectDir)\Parser\"
+gplex.exe /parser TdlScanner.lex
+gppg.exe /gplex /out:TdlParser.cs TdlParser.y</PreBuildEvent>
+  </PropertyGroup>
+</Project>

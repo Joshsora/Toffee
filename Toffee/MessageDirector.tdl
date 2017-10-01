@@ -1,8 +1,0 @@
-﻿/*
-This TDL file contains the definitions for packets sent between an internal server
-and the MessageDirector.
-*/
-
-namespace Toffee.Core.Packets.Internal
-{
-}

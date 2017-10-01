@@ -1,0 +1,32 @@
+﻿/*
+This TDL file contains the definitions for packets sent between a client and the
+ClientAgent.
+*/
+
+namespace Toffee.Protocol.Packets.Client
+{
+	/*
+	Service packets
+	- Open; Creates an instance.
+	- Close; Destroys an instance.
+	- List; Creates multiple instances.
+	*/
+	struct ServiceOpen
+	{
+		uint DistributedId;
+		uint ServiceType;
+		FieldUpdate[] CurrentState;
+	}
+
+	struct ServiceClose
+	{
+		uint DistributedId;
+		byte ErrorCode;
+		string Message;
+	}
+
+	struct ServiceList
+	{
+		ServiceOpen[] Services;
+	}
+}

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11C99569-FE3D-4E4E-8D69-F8FD031B4453}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Toffee.Protocol</RootNamespace>
+    <AssemblyName>Toffee.Protocol</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Fasterflect, Version=2.1.3.0, Culture=neutral, PublicKeyToken=38d18473284c1ca7, processorArchitecture=MSIL">
+      <HintPath>..\packages\fasterflect.2.1.3\lib\net40\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Definitions\Attributes\ToffeeClassAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeeMethodAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeePropertyAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeeServiceAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeeStructureAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeeStructurePropertyAttribute.cs" />
+    <Compile Include="Definitions\IToffeeStructure.cs" />
+    <Compile Include="Definitions\ToffeeClass.cs" />
+    <Compile Include="Definitions\ToffeeField.cs" />
+    <Compile Include="Definitions\ToffeeMethod.cs" />
+    <Compile Include="Definitions\ToffeeNetwork.cs" />
+    <Compile Include="Definitions\ToffeeObject.cs" />
+    <Compile Include="Definitions\ToffeeProperty.cs" />
+    <Compile Include="Definitions\ToffeeService.cs" />
+    <Compile Include="Definitions\ToffeeStruct.cs" />
+    <Compile Include="Objects\DistributedObject.cs" />
+    <Compile Include="Objects\ObjectContainer.cs" />
+    <Compile Include="Packets\Client\ClientHello.cs" />
+    <Compile Include="Packets\Client\ClientHelloResponse.cs" />
+    <Compile Include="Packets\Client\ClientPacketHeader.cs" />
+    <Compile Include="Packets\FieldUpdate.cs" />
+    <Compile Include="Packets\Internal\InternalHello.cs" />
+    <Compile Include="Packets\Internal\InternalHelloResponse.cs" />
+    <Compile Include="Packets\Internal\InternalPacketHeader.cs" />
+    <Compile Include="Packets\ObjectEnter.cs" />
+    <Compile Include="Packets\ObjectExit.cs" />
+    <Compile Include="Packets\ObjectUpdateFields.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Service.cs" />
+    <Compile Include="Services\ServiceContainer.cs" />
+    <Compile Include="ToffeePacket.cs" />
+    <Compile Include="ToffeePacketIterator.cs" />
+    <Compile Include="ToffeeParticipant.cs" />
+    <Compile Include="ToffeeReceiveState.cs" />
+    <Compile Include="ToffeeType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="TdlSource\ClientAgent.tdl" />
+    <None Include="TdlSource\Handshake.tdl" />
+    <None Include="TdlSource\Headers.tdl" />
+    <None Include="TdlSource\MessageDirector.tdl" />
+    <None Include="TdlSource\Objects.tdl" />
+    <None Include="TdlSource\Toffee.tdl">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toffee.Core\Toffee.Core.csproj">
+      <Project>{60c832df-ccda-4edd-9da3-10dfe4db36de}</Project>
+      <Name>Toffee.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toffee.Util\Toffee.Util.csproj">
+      <Project>{203d7b30-9793-4314-8ca3-acd227c86b34}</Project>
+      <Name>Toffee.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

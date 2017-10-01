@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{85D7F1BA-8726-4A2E-AA52-7F476161C167}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Toffee.Network</RootNamespace>
+    <AssemblyName>Toffee.Network</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Definitions\Attributes\ToffeeClassAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeeMethodAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeePropertyAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeeServiceAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeeStructureAttribute.cs" />
+    <Compile Include="Definitions\Attributes\ToffeeStructurePropertyAttribute.cs" />
+    <Compile Include="Definitions\IToffeeStructure.cs" />
+    <Compile Include="Definitions\ToffeeClass.cs" />
+    <Compile Include="Definitions\ToffeeField.cs" />
+    <Compile Include="Definitions\ToffeeMethod.cs" />
+    <Compile Include="Definitions\ToffeeNetwork.cs" />
+    <Compile Include="Definitions\ToffeeObject.cs" />
+    <Compile Include="Definitions\ToffeeProperty.cs" />
+    <Compile Include="Definitions\ToffeeService.cs" />
+    <Compile Include="Definitions\ToffeeStruct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToffeePacket.cs" />
+    <Compile Include="ToffeePacketIterator.cs" />
+    <Compile Include="ToffeeParticipant.cs" />
+    <Compile Include="ToffeeReceiveState.cs" />
+    <Compile Include="ToffeeType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toffee.Core\Toffee.Core.csproj">
+      <Project>{60c832df-ccda-4edd-9da3-10dfe4db36de}</Project>
+      <Name>Toffee.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toffee.Util\Toffee.Util.csproj">
+      <Project>{203d7b30-9793-4314-8ca3-acd227c86b34}</Project>
+      <Name>Toffee.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
