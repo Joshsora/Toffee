@@ -86,9 +86,7 @@
     <None Include="TdlSource\Headers.tdl" />
     <None Include="TdlSource\MessageDirector.tdl" />
     <None Include="TdlSource\Objects.tdl" />
-    <None Include="TdlSource\Toffee.tdl">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    <None Include="TdlSource\Toffee.tdl" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Toffee.Core\Toffee.Core.csproj">
