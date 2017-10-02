@@ -1,6 +1,6 @@
-﻿using Toffee.Core.Definitions;
+﻿using Toffee.Protocol.Definitions;
 
-namespace Toffee.Core.Objects
+namespace Toffee.Protocol.Objects
 {
     public class DistributedObject
     {

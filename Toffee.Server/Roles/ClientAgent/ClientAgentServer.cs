@@ -1,6 +1,7 @@
 ﻿using System.Net.Sockets;
 using Toffee.Core;
-using Toffee.Core.Packets.Client;
+using Toffee.Protocol;
+using Toffee.Protocol.Packets.Client;
 using Toffee.Core.Parser.Definitions;
 using Toffee.Client;
 using Toffee.Util;

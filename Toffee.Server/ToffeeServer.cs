@@ -2,7 +2,7 @@
 using System.Net;
 using System.Net.Sockets;
 
-using Toffee.Core.Definitions;
+using Toffee.Protocol.Definitions;
 using Toffee.Logging;
 
 namespace Toffee.Server

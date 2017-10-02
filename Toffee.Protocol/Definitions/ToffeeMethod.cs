@@ -2,9 +2,10 @@
 using System.Linq;
 using System.Reflection;
 
-using Toffee.Core.Packets;
+using Toffee.Core;
+using Toffee.Protocol.Packets;
 
-namespace Toffee.Core.Definitions
+namespace Toffee.Protocol.Definitions
 {
     public class ToffeeMethod : ToffeeField
     {

@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Reflection;
 using Fasterflect;
+using Toffee.Core;
 
-namespace Toffee.Core.Definitions
+namespace Toffee.Protocol.Definitions
 {
     public class ToffeeStruct : ToffeeObject
     {

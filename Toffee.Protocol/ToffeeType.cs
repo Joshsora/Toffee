@@ -1,7 +1,8 @@
 ﻿using System;
-using Toffee.Core.Definitions;
+using Toffee.Core;
+using Toffee.Protocol.Definitions;
 
-namespace Toffee.Core
+namespace Toffee.Protocol
 {
     public class ToffeeType
     {

@@ -1,7 +1,7 @@
 ﻿using System.Net.Sockets;
 
 using Toffee.Core;
-using Toffee.Core.Packets;
+using Toffee.Protocol;
 using Toffee.Server.Internal;
 using Toffee.Logging;
 

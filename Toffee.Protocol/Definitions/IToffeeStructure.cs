@@ -1,4 +1,4 @@
-﻿namespace Toffee.Core.Definitions
+﻿namespace Toffee.Protocol.Definitions
 {
     public interface IToffeeStructure
     {

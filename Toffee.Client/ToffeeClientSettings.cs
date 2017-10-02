@@ -1,4 +1,4 @@
-﻿using Toffee.Core.Definitions;
+﻿using Toffee.Protocol.Definitions;
 
 namespace Toffee.Client
 {

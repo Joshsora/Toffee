@@ -4,10 +4,10 @@ using System.Linq;
 using System.Reflection;
 using Fasterflect;
 
-using Toffee.Core.Definitions.Attributes;
-using Toffee.Core.Parser.Definitions;
+using Toffee.Core;
+using Toffee.Protocol.Definitions.Attributes;
 
-namespace Toffee.Core.Definitions
+namespace Toffee.Protocol.Definitions
 {
     public class ToffeeNetwork
     {

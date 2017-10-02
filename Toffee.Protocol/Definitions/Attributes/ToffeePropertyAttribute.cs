@@ -1,6 +1,7 @@
 ﻿using System;
+using Toffee.Core;
 
-namespace Toffee.Core.Definitions.Attributes
+namespace Toffee.Protocol.Definitions.Attributes
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class ToffeePropertyAttribute : Attribute

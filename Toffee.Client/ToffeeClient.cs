@@ -3,7 +3,8 @@ using System.Timers;
 using System.Diagnostics;
 
 using Toffee.Core;
-using Toffee.Core.Packets.Client;
+using Toffee.Protocol;
+using Toffee.Protocol.Packets.Client;
 
 namespace Toffee.Client
 {

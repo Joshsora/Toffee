@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Toffee.Util;
 
-namespace Toffee.Core.Definitions
+namespace Toffee.Protocol.Definitions
 {
     public class ToffeeObject
     {

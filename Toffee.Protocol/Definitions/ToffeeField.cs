@@ -1,7 +1,8 @@
-﻿using Toffee.Util;
-using Toffee.Core.Packets;
+﻿using Toffee.Core;
+using Toffee.Util;
+using Toffee.Protocol.Packets;
 
-namespace Toffee.Core.Definitions
+namespace Toffee.Protocol.Definitions
 {
     public abstract class ToffeeField
     {

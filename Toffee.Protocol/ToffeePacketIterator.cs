@@ -3,9 +3,10 @@ using System.Text;
 using System.Linq;
 using Fasterflect;
 
-using Toffee.Core.Definitions;
+using Toffee.Core;
+using Toffee.Protocol.Definitions;
 
-namespace Toffee.Core
+namespace Toffee.Protocol
 {
     public class ToffeePacketIterator
     {

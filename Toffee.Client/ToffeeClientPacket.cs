@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using Toffee.Core;
-using Toffee.Core.Packets.Client;
+using Toffee.Protocol;
+using Toffee.Protocol.Packets.Client;
 using Toffee.Util;
 
 namespace Toffee.Client

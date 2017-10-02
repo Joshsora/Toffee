@@ -1,5 +1,6 @@
 ﻿using Toffee.Core;
-using Toffee.Core.Packets.Internal;
+using Toffee.Protocol;
+using Toffee.Protocol.Packets.Internal;
 using Toffee.Util;
 
 namespace Toffee.Server.Internal

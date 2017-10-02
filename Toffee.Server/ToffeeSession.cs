@@ -1,5 +1,5 @@
 ﻿using System.Net.Sockets;
-using Toffee.Core;
+using Toffee.Protocol;
 using Toffee.Util;
 
 namespace Toffee.Server

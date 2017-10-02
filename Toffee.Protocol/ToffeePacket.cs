@@ -3,9 +3,10 @@ using System.Text;
 using System.Collections.Generic;
 using Fasterflect;
 
-using Toffee.Core.Definitions;
+using Toffee.Core;
+using Toffee.Protocol.Definitions;
 
-namespace Toffee.Core
+namespace Toffee.Protocol
 {
     /// <summary>
     /// A class that represents a packet that is under construction.

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Toffee.Core.Objects
+namespace Toffee.Protocol.Objects
 {
     public class ObjectContainer
     {

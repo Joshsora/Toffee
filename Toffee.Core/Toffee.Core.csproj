@@ -85,7 +85,7 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PreBuildEvent>cd "$(ProjectDir)\Parser\"
-gplex /parser TdlScanner.lex
-gppg /gplex /out:TdlParser.cs TdlParser.y</PreBuildEvent>
+gplex.exe /parser TdlScanner.lex
+gppg.exe /gplex /out:TdlParser.cs TdlParser.y</PreBuildEvent>
   </PropertyGroup>
 </Project>

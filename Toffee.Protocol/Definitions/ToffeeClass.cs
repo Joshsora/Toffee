@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Toffee.Core.Definitions
+using Toffee.Core;
+
+namespace Toffee.Protocol.Definitions
 {
     public class ToffeeClass : ToffeeStruct
     {

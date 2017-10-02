@@ -1,4 +1,4 @@
-﻿using Toffee.Core.Packets.Internal;
+﻿using Toffee.Protocol.Packets.Internal;
 
 namespace Toffee.Server.Internal
 {

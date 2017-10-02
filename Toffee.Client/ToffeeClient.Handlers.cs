@@ -1,6 +1,6 @@
 ﻿using System.Timers;
-using Toffee.Core;
-using Toffee.Core.Packets.Client;
+using Toffee.Protocol;
+using Toffee.Protocol.Packets.Client;
 using System;
 
 namespace Toffee.Client

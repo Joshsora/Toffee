@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Net.Sockets;
-using Toffee.Core.Objects;
-using Toffee.Core.Services;
-using Toffee.Core.Definitions;
+using Toffee.Protocol.Objects;
+using Toffee.Protocol.Services;
+using Toffee.Protocol.Definitions;
 using Toffee.Util;
 
-namespace Toffee.Core
+namespace Toffee.Protocol
 {
     /// <summary>
     /// A very simple network participant to a Toffee network.

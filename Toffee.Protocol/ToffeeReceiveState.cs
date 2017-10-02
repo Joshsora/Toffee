@@ -1,4 +1,4 @@
-﻿namespace Toffee.Core
+﻿namespace Toffee.Protocol
 {
     /// <summary>
     /// The state used during asyncronous operations to receive data.
