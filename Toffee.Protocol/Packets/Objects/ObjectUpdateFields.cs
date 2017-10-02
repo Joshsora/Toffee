@@ -7,23 +7,28 @@ using Toffee.Protocol.Definitions;
 using Toffee.Protocol.Definitions.Attributes;
 using System.CodeDom.Compiler;
 
-namespace Toffee.Protocol.Packets.Client
+namespace Toffee.Protocol.Packets.Objects
 {
 	[GeneratedCode("ToffeeCompiler", "csharp")]	
 	[ToffeeStructure("StdToffee")]
-	public partial class ServiceList : IToffeeStructure
+	public partial class ObjectUpdateFields : IToffeeStructure
 	{
 		[ToffeeStructureProperty(1)]
-		public ServiceOpen[] Services { get; set; }
+		public uint DistributedId { get; set; }
+		
+		[ToffeeStructureProperty(2)]
+		public FieldUpdate[] Updates { get; set; }
 		
 		public void WriteTo(ToffeePacket packet)
 		{
-			packet.Write(Services);
+			packet.Write(DistributedId);
+			packet.Write(Updates);
 		}
 		
 		public void ReadFrom(ToffeePacketIterator iterator)
 		{
-			Services = (ServiceOpen[])iterator.ReadArray();
+			DistributedId = iterator.ReadUInt32();
+			Updates = (FieldUpdate[])iterator.ReadArray();
 		}
 	}
 }

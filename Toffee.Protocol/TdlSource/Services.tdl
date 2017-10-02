@@ -3,7 +3,7 @@ This TDL file contains the definitions for packets sent between a client and the
 ClientAgent.
 */
 
-namespace Client
+namespace Services
 {
 	/*
 	Service packets

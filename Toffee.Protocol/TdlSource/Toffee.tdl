@@ -7,6 +7,6 @@ network StdToffee;
 import Headers;
 import Handshake;
 import Objects;
+import Services;
 
-import ClientAgent;
 import MessageDirector;

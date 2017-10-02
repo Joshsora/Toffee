@@ -63,16 +63,16 @@
     <Compile Include="Packets\Client\ClientHello.cs" />
     <Compile Include="Packets\Client\ClientHelloResponse.cs" />
     <Compile Include="Packets\Client\ClientPacketHeader.cs" />
-    <Compile Include="Packets\Client\ServiceClose.cs" />
-    <Compile Include="Packets\Client\ServiceList.cs" />
-    <Compile Include="Packets\Client\ServiceOpen.cs" />
-    <Compile Include="Packets\FieldUpdate.cs" />
     <Compile Include="Packets\Internal\InternalHello.cs" />
     <Compile Include="Packets\Internal\InternalHelloResponse.cs" />
     <Compile Include="Packets\Internal\InternalPacketHeader.cs" />
-    <Compile Include="Packets\ObjectEnter.cs" />
-    <Compile Include="Packets\ObjectExit.cs" />
-    <Compile Include="Packets\ObjectUpdateFields.cs" />
+    <Compile Include="Packets\Objects\FieldUpdate.cs" />
+    <Compile Include="Packets\Objects\ObjectEnter.cs" />
+    <Compile Include="Packets\Objects\ObjectExit.cs" />
+    <Compile Include="Packets\Objects\ObjectUpdateFields.cs" />
+    <Compile Include="Packets\Services\ServiceClose.cs" />
+    <Compile Include="Packets\Services\ServiceList.cs" />
+    <Compile Include="Packets\Services\ServiceOpen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Service.cs" />
     <Compile Include="Services\ServiceContainer.cs" />
@@ -84,7 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="TdlSource\ClientAgent.tdl" />
+    <None Include="TdlSource\Services.tdl" />
     <None Include="TdlSource\Handshake.tdl" />
     <None Include="TdlSource\Headers.tdl" />
     <None Include="TdlSource\MessageDirector.tdl" />

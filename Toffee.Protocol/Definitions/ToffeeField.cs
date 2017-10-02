@@ -1,6 +1,6 @@
 ﻿using Toffee.Core;
 using Toffee.Util;
-using Toffee.Protocol.Packets;
+using Toffee.Protocol.Packets.Objects;
 
 namespace Toffee.Protocol.Definitions
 {

@@ -3,7 +3,7 @@ using System.Linq;
 using System.Reflection;
 
 using Toffee.Core;
-using Toffee.Protocol.Packets;
+using Toffee.Protocol.Packets.Objects;
 
 namespace Toffee.Protocol.Definitions
 {

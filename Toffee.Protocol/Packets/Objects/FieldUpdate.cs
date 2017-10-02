@@ -7,7 +7,7 @@ using Toffee.Protocol.Definitions;
 using Toffee.Protocol.Definitions.Attributes;
 using System.CodeDom.Compiler;
 
-namespace Toffee.Protocol.Packets
+namespace Toffee.Protocol.Packets.Objects
 {
 	[GeneratedCode("ToffeeCompiler", "csharp")]	
 	[ToffeeStructure("StdToffee")]
