@@ -14,6 +14,9 @@ namespace ToffeeCompiler
         public string OutputDirectory { get; set; }
 
         [CommandLineArgument(DefaultValue = "")]
+        public string SkipNamespaceDirectory { get; set; }
+
+        [CommandLineArgument(DefaultValue = "")]
         public string BaseNamespace { get; set; }
 
         [CommandLineArgument(DefaultValue = false)]

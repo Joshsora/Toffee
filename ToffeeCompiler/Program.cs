@@ -10,7 +10,7 @@ using Toffee.Core.Parser.Definitions;
 
 namespace ToffeeCompiler
 {
-    public class Program
+    public static class Program
     {
         public static Stopwatch Stopwatch { get; set; }
         public static ToffeeCompilerArguments Arguments { get; set; }

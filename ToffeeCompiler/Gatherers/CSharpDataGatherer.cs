@@ -133,6 +133,22 @@ namespace ToffeeCompiler.Gatherers
                         // Set this object's namespace data
                         Writer.Define("HAS_NAMESPACE");
                         Writer.AddData("NAMESPACE", namespaceIdentifier);
+
+                        // Do we want to skip some directories?
+                        string skipNamespaceDirectory = Program.Arguments.SkipNamespaceDirectory;
+                        if (skipNamespaceDirectory != "")
+                        {
+                            int position = 0;
+                            string[] pieces = CurrentObject.Namespace.FullName.Split('.');
+                            foreach (string skipPiece in skipNamespaceDirectory.Split('.'))
+                            {
+                                if (skipPiece != pieces[position])
+                                    break;
+                                position++;
+                            }
+                            namespaceIdentifier = string.Join(".", pieces.Skip(position));
+                        }
+
                         Writer.AddData("FOLDER", namespaceIdentifier.Replace('.', '/'));
                     }
 
