@@ -63,6 +63,9 @@
     <Compile Include="Packets\Client\ClientHello.cs" />
     <Compile Include="Packets\Client\ClientHelloResponse.cs" />
     <Compile Include="Packets\Client\ClientPacketHeader.cs" />
+    <Compile Include="Packets\Client\ServiceClose.cs" />
+    <Compile Include="Packets\Client\ServiceList.cs" />
+    <Compile Include="Packets\Client\ServiceOpen.cs" />
     <Compile Include="Packets\FieldUpdate.cs" />
     <Compile Include="Packets\Internal\InternalHello.cs" />
     <Compile Include="Packets\Internal\InternalHelloResponse.cs" />
