@@ -99,4 +99,8 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>cd "$(ProjectDir)"
+"$(SolutionDir)/ToffeeCompiler/$(OutDir)/ToffeeCompiler.exe" csharp TdlSource/Toffee.tdl -BaseNamespace Toffee.Protocol.Packets -SkipNamespaceDirectory Toffee.Protocol</PreBuildEvent>
+  </PropertyGroup>
 </Project>
