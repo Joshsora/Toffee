@@ -3,7 +3,7 @@ This TDL file contains the definitions for handshake structures
 that are used in the Toffee protocol.
 */
 
-namespace Toffee.Protocol.Packets.Client
+namespace Client
 {
 	struct ClientHello
 	{
@@ -23,7 +23,7 @@ namespace Toffee.Protocol.Packets.Client
 	}
 }
 
-namespace Toffee.Protocol.Packets.Internal
+namespace Internal
 {
 	struct InternalHello
 	{

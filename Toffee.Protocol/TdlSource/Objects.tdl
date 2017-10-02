@@ -3,32 +3,29 @@ This TDL file imports the definitions of object structures
 that are used in the Toffee protocol.
 */
 
-namespace Toffee.Protocol.Packets
+// Field updates
+struct FieldUpdate
 {
-	// Field updates
-	struct FieldUpdate
-	{
-	    uint FieldId;
-		byte[] Parameters;
-	}
+	uint FieldId;
+	byte[] Parameters;
+}
 
-	struct ObjectUpdateFields
-	{
-        uint DistributedId;
-        FieldUpdate[] Updates;
-	}
+struct ObjectUpdateFields
+{
+    uint DistributedId;
+    FieldUpdate[] Updates;
+}
 
-	// Spawning/Despawning
-	struct ObjectEnter
-	{
-		uint DistributedId;
-		uint ObjectType;
-		FieldUpdate[] CurrentState;
-	}
+// Spawning/Despawning
+struct ObjectEnter
+{
+	uint DistributedId;
+	uint ObjectType;
+	FieldUpdate[] CurrentState;
+}
 
-	struct ObjectExit
-	{
-		uint DistributedId;
-		bool Destroyed;
-	}
+struct ObjectExit
+{
+	uint DistributedId;
+	bool Destroyed;
 }

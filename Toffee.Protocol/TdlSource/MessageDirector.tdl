@@ -3,6 +3,6 @@ This TDL file contains the definitions for packets sent between an internal serv
 and the MessageDirector.
 */
 
-namespace Toffee.Protocol.Packets.Internal
+namespace Internal
 {
 }

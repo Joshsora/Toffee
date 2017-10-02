@@ -3,7 +3,7 @@ This TDL file contains the definitions for header structures
 that are used in the Toffee protocol.
 */
 
-namespace Toffee.Protocol.Packets.Client
+namespace Client
 {
 	/*
 	Header used for direct client->client-agent, and client-agent->client
@@ -18,7 +18,7 @@ namespace Toffee.Protocol.Packets.Client
 	}
 }
 
-namespace Toffee.Protocol.Packets.Internal
+namespace Internal
 {	
 	/*
 	Header for components that communicate over the
